@@ -19,26 +19,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Qui">
+    <meta name="description" content="AMS1117-3.3线性减压器。下图为AMS1117-3.3典型外围电路，供STM32F103C8T6使用。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2025/02/06/hello-world/index.html">
+<meta property="og:title" content="AMS1117-3.3典型电路及优化方案">
+<meta property="og:url" content="http://example.com/2025/02/19/AMS1117-3-3%E5%85%B8%E5%9E%8B%E7%94%B5%E8%B7%AF%E5%8F%8A%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/index.html">
 <meta property="og:site_name" content="心雨的小站">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Qui">
+<meta property="og:description" content="AMS1117-3.3线性减压器。下图为AMS1117-3.3典型外围电路，供STM32F103C8T6使用。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2025-02-06T08:38:23.445Z">
-<meta property="article:modified_time" content="2025-02-10T07:58:38.516Z">
+<meta property="og:image" content="http://example.com/img/AMS1117-3.3.png">
+<meta property="article:published_time" content="2025-02-19T07:36:06.000Z">
+<meta property="article:modified_time" content="2025-02-19T07:47:22.060Z">
 <meta property="article:author" content="xlxychao">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/AMS1117-3.3.png">
 
 
-<link rel="canonical" href="http://example.com/2025/02/06/hello-world/">
+<link rel="canonical" href="http://example.com/2025/02/19/AMS1117-3-3%E5%85%B8%E5%9E%8B%E7%94%B5%E8%B7%AF%E5%8F%8A%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2025/02/06/hello-world/","path":"2025/02/06/hello-world/","title":"Hello World"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2025/02/19/AMS1117-3-3%E5%85%B8%E5%9E%8B%E7%94%B5%E8%B7%AF%E5%8F%8A%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/","path":"2025/02/19/AMS1117-3-3典型电路及优化方案/","title":"AMS1117-3.3典型电路及优化方案"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Hello World | 心雨的小站</title>
+<title>AMS1117-3.3典型电路及优化方案 | 心雨的小站</title>
   
 
 
@@ -97,7 +99,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -110,7 +112,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -123,7 +124,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -155,7 +156,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/02/06/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/02/19/AMS1117-3-3%E5%85%B8%E5%9E%8B%E7%94%B5%E8%B7%AF%E5%8F%8A%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -168,12 +169,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Hello World | 心雨的小站">
+      <meta itemprop="name" content="AMS1117-3.3典型电路及优化方案 | 心雨的小站">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World
+          AMS1117-3.3典型电路及优化方案
         </h1>
 
         <div class="post-meta-container">
@@ -183,15 +184,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2025-02-06 16:38:23" itemprop="dateCreated datePublished" datetime="2025-02-06T16:38:23+08:00">2025-02-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-02-10 15:58:38" itemprop="dateModified" datetime="2025-02-10T15:58:38+08:00">2025-02-10</time>
+      <time title="Created: 2025-02-19 15:36:06 / Modified: 15:47:22" itemprop="dateCreated datePublished" datetime="2025-02-19T15:36:06+08:00">2025-02-19</time>
     </span>
 
   
@@ -203,21 +198,10 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><span id="more"></span>
+    <div class="post-body" itemprop="articleBody"><p>AMS1117-3.3线性减压器。下图为AMS1117-3.3典型外围电路，供STM32F103C8T6使用。<br><img src="/img/AMS1117-3.3.png" alt="AMS1117-3.3"></p>
+<span id="more"></span> 
 
-<p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>上图中，电容器C8、C10(容值47uF)为极性电容(钽电容)，由于AMS1117的设计导致其依托于外围电容的寄生电阻(ESR)来实现功能，但是钽电容售价较高，稳定性不好，容易炸板子。<br>钽电容的ESR一般为1R，因此我们可以将上图的钽电容替换为一个47uF的MLCC和1R电阻的串联。</p>
 
     </div>
 
@@ -231,11 +215,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/2025/02/11/2-10%E8%B5%B7%E9%87%8D%E6%9C%BA%E6%A2%B0%E6%A3%80%E9%AA%8C%E5%91%98%E8%83%BD%E5%8A%9B%E8%A6%81%E6%B1%82/" rel="prev" title="2.10起重机械检验员能力要求">
+                  <i class="fa fa-angle-left"></i> 2.10起重机械检验员能力要求
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2025/02/07/%E7%94%B5%E5%8A%A8%E5%8D%95%E6%A2%81%E8%B5%B7%E9%87%8D%E6%9C%BA/" rel="next" title="电动单梁起重机">
-                  电动单梁起重机 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
