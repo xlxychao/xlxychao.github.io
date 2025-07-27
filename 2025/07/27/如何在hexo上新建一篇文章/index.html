@@ -27,7 +27,7 @@
 <meta property="og:description" content="此文用于更新设备或者重装系统后，在新的Windows系统上重新建立博客管理。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-07-27T08:44:22.000Z">
-<meta property="article:modified_time" content="2025-07-27T08:47:24.164Z">
+<meta property="article:modified_time" content="2025-07-27T09:00:57.516Z">
 <meta property="article:author" content="xlxychao">
 <meta name="twitter:card" content="summary">
 
@@ -184,7 +184,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2025-07-27 16:44:22 / Modified: 16:47:24" itemprop="dateCreated datePublished" datetime="2025-07-27T16:44:22+08:00">2025-07-27</time>
+      <time title="Created: 2025-07-27 16:44:22 / Modified: 17:00:57" itemprop="dateCreated datePublished" datetime="2025-07-27T16:44:22+08:00">2025-07-27</time>
     </span>
 
   
@@ -199,7 +199,19 @@
     <div class="post-body" itemprop="articleBody"><p>此文用于更新设备或者重装系统后，在新的Windows系统上重新建立博客管理。</p>
 <span id="more"></span> 
 
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;文章标题&quot;</span></span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<ol>
+<li>使用<code>git clone</code>命令克隆远程仓库到本地 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/xlxychao/xlxychao.github.io.git</span><br></pre></td></tr></table></figure></li>
+<li>进入克隆下来的目录 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> xlxychao.github.io</span><br></pre></td></tr></table></figure></li>
+<li>使用<code>hexo new</code>命令新建一篇文章 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;如何在hexo上新建一篇文章&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li>编辑新建的文章文件，通常位于<code>source/_posts/</code>目录 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code <span class="built_in">source</span>/_posts/如何在hexo上新建一篇文章.md </span><br></pre></td></tr></table></figure></li>
+<li>在编辑器中添加文章内容，保存并关闭文件</li>
+<li>使用<code>hexo clean</code>命令清理缓存 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure></li>
+<li>使用<code>hexo generate</code>命令生成静态文件 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure></li>
+<li>使用<code>hexo serve</code>命令启动本地服务器 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></li>
+<li>打开浏览器，访问<code>http://localhost:4000</code>查看新建的文章</li>
+<li>如果满意，可以使用<code>hexo deploy</code>命令将更改推送到远程仓库<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></li>
+</ol>
+
     </div>
 
     
